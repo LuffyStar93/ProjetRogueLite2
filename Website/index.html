@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foolish Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/favicon.ico" />
+</head>
+<body>
+    <nav id="navbar">
+        <div class="navbar_left">
+            <a class="navbar_button" href="#home">Home</a>
+            <a class="navbar_button" href="#about_us">About us</a>
+        </div>
+        <div class="navbar_middle">
+            <a class="navbar_button_img" href="#home"><img class="navbar_logo" src="./assets/LogoStudio.png" alt="logo_foolish_studio"></a>
+        </div>
+        <div class="navbar_right">
+            <a class="navbar_button" href="#games">Games</a>
+            <a class="navbar_button" href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <section id="home">
+        <div class="home_container">
+            <img src="./assets/LogoStudio.png" alt="" class="home_logo">
+            <div class="home_text">
+                <p>Foolish</p>
+                <p>Studio</p>
+            </div>
+        </div>
+        <video id="trailer" autoplay loop muted preload="auto"><source src="./assets/" type="video/mp4"></video>
+    </section>
+    <section id="about_us">
+        <h2>About Us</h2>
+        <div class="card_container">
+            <div class="card">
+                <img class="card_picture" src="./assets/pp_max.webp" alt="">
+                <p class="card_name">Maxime - 28 ans</p>
+                <p class="card_description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Assumenda accusamus sint ab aspernatur exercitationem praesentium
+                </p>
+            </div>
+            <div class="card">
+                <img class="card_picture" src="./assets/pp_maitson.webp" alt="">
+                <p class="card_name">Maïtson - 20 ans</p>
+                <p class="card_description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Assumenda accusamus sint ab aspernatur exercitationem praesentium
+                </p>
+            </div>
+            <div class="card">
+                <img class="card_picture" src="./assets/pp_mamadou.webp" alt="">
+                <p class="card_name">Mamadou - 21 ans</p>
+                <p class="card_description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Assumenda accusamus sint ab aspernatur exercitationem praesentium
+                </p>
+            </div>
+            <div class="card">
+                <img class="card_picture" src="./assets/pp_hugo.webp" alt="">
+                <p class="card_name">Hugo - 25ans</p>
+                <p class="card_description">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                    Assumenda accusamus sint ab aspernatur exercitationem praesentium
+                </p>
+            </div>
+        </div>
+    
+
+    </section>
+    <section id="games">
+        <h2>Games</h2>
+        <div class="games_container">
+            <picture class="games_left">
+                <img src="./assets/LogoStudio.png" alt="">
+            </picture>
+            <div class="games_right">
+                <h3 class="game_name">
+                   The Jester's Revenge
+                </h3>
+                <p class="game_description">
+                    The Jester's Revenge est un jeu roguelite médiéval en 3D isométrique où 
+                    "Jester" assoiffés de vengeance décida de prendre les armes pour sauver
+                    le royaume de leurs Roi Tyranique.
+                </p>
+                <p class="game_catchphrase">Combattez des hordes de monstres, progresser dans le chateau et sauver le royaume</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="contact_container">
+            <div class="contact_left">
+                <p>Tel : 0148619403</p>
+                <p>Adresse : Simplon Aulnay</p>
+            </div>
+            <div class="contact_right">
+                <form action="" name="form_contact" id="form_contact">
+                    <input type="email" name="form_email" id="form_email" placeholder="Entrer votre email">
+                    <input type="text" name="form_subject" id="form_subject" placeholder="Entrer l'objet du mail">
+                    <label for="form_message"></label>
+                    <textarea name="form_message" id="form_message" placeholder="Message du mail"></textarea>
+                    <button class="form_button" type="reset">Envoyer</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+<footer id="footer">
+<p> © LuffyStar93 - 2024</p>
+</footer>
+</html>

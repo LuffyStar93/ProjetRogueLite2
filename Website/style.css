@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    color:white;
+    background-color: black;
+}
+
+h2{
+    text-align: center;
+    font-size: 48px;
+    margin: 10px 0px;
+    color: white;
+}
+
+/* NAVBAR */
+
+#navbar{
+ position: fixed;
+ z-index: 3;
+ width: 100%;
+ height: 50px;
+ display: flex;
+ justify-content: space-around;   
+ background-color: black;
+}
+.navbar_left,.navbar_right,.navbar_middle{
+    width: 32%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-around;
+
+}
+.navbar_button{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%    ;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+.navbar_button a{
+    cursor: pointer;
+}
+
+.navbar_button:hover{
+ color: black;
+ cursor:pointer;
+ /* background-color: white; */
+ box-shadow: inset 0 50px white;
+}
+
+.navbar_logo{
+    display: flex;
+    align-items: center;
+    height: 48px;
+    cursor: pointer;
+}
+/* SECTION 1 - HOME */
+
+#home{
+    padding-top: 50px;
+    margin-bottom: 60px;
+    /* height: 600px; */
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.home_container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home_logo{
+    height: 300px;
+}
+
+.home_text{
+    font-size: 80px;
+    margin: 0px 50px;
+}
+
+
+#trailer{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+    bottom: 0;
+    z-index: -1;
+    /* width: 100%;
+    height: 100%; */
+    /* height: 100%; */
+}
+
+/* SECTION 2 - ABOUT US */
+#about_us{
+    height: 100vh;
+    
+}
+.card_container{
+    width: 100%;
+    display: flex;
+    margin: 50px 0px;
+    justify-content: space-around;
+}
+
+.card{
+   display: flex;
+   width: 350px;
+   height: 300px;
+   flex-direction: column;
+   justify-content: center;
+   padding: 10px;
+   /* justify-content: center; */
+   align-items: center;
+   background-color: rgba(225,255,255,.1);
+   border-radius: 10px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   -ms-border-radius: 10px;
+   -o-border-radius: 10px;
+}
+
+.card_picture{
+ height: 80px;
+ width: 80px;
+ margin: 20px;
+ border-radius: 50%;
+ -webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+}
+
+.card_name{
+ color: white;
+ font-weight: bold;
+ font-size: 18px;
+}
+
+.card_description{
+color: white;
+margin: 20px;
+text-align: center;
+}
+
+/* SECTION 3 - GAMES */
+
+#games{
+    width: 100%;
+    height: 100vh;
+}
+
+.games_container{
+    margin: 50px 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.games_left,.games_right{
+    width: 50%;
+}
+
+.game_name{
+    font-size: 70px;
+    margin: 50px 0px;
+}
+.game_description{
+    font-size: 22px;
+}
+
+.game_catchphrase{
+    text-transform: uppercase;
+    margin:50px 0px;
+    font-size: 28px;
+}
+/* SECTION 4 - CONTACT */
+
+#contact{
+    width: 100%;
+    margin: 25px 0px;
+    /* height: 70vh; */
+}
+
+.contact_container{
+    /* margin: 50px; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* width: 70%; */
+    height: 400px;
+    /* background-color: rgba(255, 255, 255, .1); */
+}
+
+.contact_left,.contact_right{
+ width: 45%;
+}
+
+#form_contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+}
+
+#form_email,#form_subject,#form_message,.form_button{
+    margin: 10px;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.form_button{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* FOOTER */
+
+#footer{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+}
