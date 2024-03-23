@@ -6,7 +6,7 @@ moveRight = keyboard_check(ord("D")) or gamepad_button_check(0, gp_padr) or (gam
 moveLeft = keyboard_check(ord("Q")) or gamepad_button_check(0, gp_padl) or (gamepad_axis_value(0, gp_axislh) < -0.5); 
 attack = mouse_check_button_pressed(mb_left) or keyboard_check_pressed(ord("J")) or gamepad_button_check(0, gp_face3);
 moveDash = keyboard_check(vk_space) or gamepad_button_check(0, gp_face1);
-special_Attack = keyboard_check(ord("K")) or keyboard_check(mb_right) or gamepad_button_check(0, gp_face4);
+special_Attack = keyboard_check(ord("K")) or mouse_check_button_pressed(mb_right) or gamepad_button_check(0, gp_face4);
 }
 
 else if (os_type = os_macosx)
@@ -17,7 +17,7 @@ moveRight = keyboard_check(ord("D")) or gamepad_button_check(0, gp_padr) or (gam
 moveLeft = keyboard_check(ord("A")) or gamepad_button_check(0, gp_padl) or (gamepad_axis_value(0, gp_axislh) < -0.5); 
 attack = mouse_check_button_pressed(mb_left) or keyboard_check_pressed(ord("J")) or gamepad_button_check(0, gp_face3);
 moveDash = keyboard_check(vk_space) or gamepad_button_check(0, gp_face1)
-special_Attack = keyboard_check(ord("K")) or keyboard_check(mb_right) or gamepad_button_check(0, gp_face4);
+special_Attack = keyboard_check(ord("K")) or mouse_check_button_pressed(mb_right) or gamepad_button_check(0, gp_face4);
 }
 
 
@@ -164,10 +164,19 @@ if special_Attack && can_SpecialAttack = 0
 {
     if instance_exists(o_EnemyTemplate) 
 	{
+		lastSprite = sprite_index
+		image_index = 0
+		if lastDirectionY = 1
+		{
+		sprite_index = s_JesterFrontStaffAttack
+		}
+		else sprite_index = s_JesterBackStaffAttack
         alarm[4] = 40; //CD DU TRUC DISTANCE
+		canMove = 1
         can_SpecialAttack = 1;
 		canAttack = 1
 		alarm[0] = 15
+		alarm[1] = 15
         var nearest_enemy = instance_nearest(x, y, o_EnemyTemplate);
         var aim_angle = point_direction(x, y, nearest_enemy.x, nearest_enemy.y); // Calcul de l'angle entre la flèche et l'ennemi le plus proche
         var distance = instance_create_depth(x, y, -1, o_Fireball); // Création de la flèche
