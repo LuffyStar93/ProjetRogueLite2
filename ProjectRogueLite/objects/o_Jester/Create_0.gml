@@ -15,3 +15,5 @@ moveDir = 0;
 can_dash = 0;
 hit = 0
 can_SpecialAttack = 0
+xspd = lengthdir_x(10,moveDir);
+yspd = lengthdir_y(10,moveDir);

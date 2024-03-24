@@ -1,5 +1,5 @@
-character_Speed = 1 //Character's movement speed
-character_Attack = 5 //Character's attack
+character_Speed = 3 //Character's movement speed
+character_Attack = 3 //Character's attack
 character_Armor = 0
 character_Health = 10
 character_MaxHealth = character_Health
@@ -10,4 +10,5 @@ canMove = 0
 lastDirectionX = 1
 lastDirectionY = 1
 lastSprite = noone
-pursuit_Range = 500
+pursuit_Range = 1000
+path = path_add();

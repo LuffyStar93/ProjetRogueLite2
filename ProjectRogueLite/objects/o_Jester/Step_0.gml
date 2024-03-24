@@ -1,3 +1,4 @@
+
 if (os_type = os_windows)
 {
 moveUp = keyboard_check(ord("Z")) or gamepad_button_check(0, gp_padu) or (gamepad_axis_value(0, gp_axislv) < -0.5);
@@ -23,24 +24,24 @@ special_Attack = keyboard_check(ord("K")) or mouse_check_button_pressed(mb_right
 
 if canMove = 0
 {
-if moveUp
+if moveUp && place_free(x,y-character_Speed)
 {
-	y -= character_Speed
+    y -= character_Speed
 }
 
-if moveDown
+if moveDown && place_free(x,y+character_Speed)
 {
-	y += character_Speed
+    y += character_Speed
 }
 
-if moveLeft 
+if moveLeft && place_free(x-character_Speed,y)
 {
-	x -= character_Speed	
+    x -= character_Speed
 }
 
-if moveRight
+if moveRight && place_free(x+character_Speed,y)
 {
-	x += character_Speed	
+    x += character_Speed
 
 }
 }
@@ -150,13 +151,16 @@ if moveDash && can_dash = 0
     alarm[3] = 15; //durée dash
 }
 
-if can_dash = 3 {
-    can_move = 1;
-        xspd = lengthdir_x(10,moveDir);
-        yspd = lengthdir_y(10,moveDir);
-        x += xspd;
-        y += yspd;
-    if directionnel { can_dash = 0; can_move = 0 }
+if can_dash = 3 && place_free(x+xspd,y+yspd) && place_free(x+character_Speed,y+character_Speed)
+{
+    xspd = lengthdir_x(10,moveDir);
+    yspd = lengthdir_y(10,moveDir);
+    x += xspd;
+    y += yspd; 
+    if directionnel 
+		{	
+			can_dash = 0; 
+		}
 	
 }
 

@@ -2,10 +2,9 @@ with (other) {
 if (canMove = 0 or 1) && (canAttack = 0) {
 character_Health -= o_Jester.character_Attack - character_Armor;
 alarm[1] = 25;
-alarm[0] = 25;
 canMove = 2;
 canAttack = 2;
-speed -= 0;
+path_delete(path);
   }
 } 
 

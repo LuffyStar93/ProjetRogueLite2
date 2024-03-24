@@ -5,13 +5,17 @@ alarm[1] = 25;
 canMove = 2;
 canAttack = 2;
 speed -= 0;
+path_delete(path);
   }
 } 
 
 character_Distance = point_direction(o_Jester.x,o_Jester.y, other.x, other.y);
 knockback_Distance = -10; // DISTANCE DU KNOCKBACK (-10 = MINIMUM)
+if place_free(other.x+other.character_Speed * 1.1,other.y+other.character_Speed * 1.1)
+{ 
 other.x -= lengthdir_x(other.character_Speed * knockback_Distance, character_Distance);
 other.y -= lengthdir_y(other.character_Speed * knockback_Distance, character_Distance);
+}
 
 //DECOMMENTE SI TU VEUT UNE INTERRACTION MARRANTE 
 //x -= lengthdir_x(other.character_Speed * -10, character_Distance);

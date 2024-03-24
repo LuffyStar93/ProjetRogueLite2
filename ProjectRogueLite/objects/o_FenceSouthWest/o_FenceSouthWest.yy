@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"o_Wall",
-  "eventList":[],
+  "%Name":"o_FenceSouthWest",
+  "eventList":[
+    {"$GMEvent":"","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"o_Wall",
+  "name":"o_FenceSouthWest",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Blocks",
+    "path":"folders/Objets/Blocks.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"o_WallTemplate",
+    "path":"objects/o_WallTemplate/o_WallTemplate.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"s_Wall",
-    "path":"sprites/s_Wall/s_Wall.yy",
+    "name":"s_FenceSouthWest",
+    "path":"sprites/s_FenceSouthWest/s_FenceSouthWest.yy",
   },
   "spriteMaskId":null,
   "visible":true,

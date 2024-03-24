@@ -1,3 +1,4 @@
+
 if instance_exists(o_Jester) {
 focus = instance_nearest(x, y, o_Jester);
 var distance_ToPlayer = point_distance(x, y, focus.x, focus.y+20);
@@ -7,7 +8,10 @@ if (distance_ToPlayer < pursuit_Range) {
     var direction_ToPlayer = sign(focus.x - x);
 
 if canMove = 0 {
-        move_towards_point(focus.x, focus.y, character_Speed);
+        if (mp_grid_path(global.grid,path,x,y,focus.x,focus.y,1)) 
+		{
+        path_start(path,character_Speed,path_action_stop,false);
+        }
   } else {
       move_towards_point(x,y, 0);
   }

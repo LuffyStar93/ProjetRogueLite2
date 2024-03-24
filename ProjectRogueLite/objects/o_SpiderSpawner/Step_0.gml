@@ -1,3 +1,4 @@
+
 // Création de la variable pour compter le nombre d'araignées
 var countSpider = instance_number(o_Spider);
 
