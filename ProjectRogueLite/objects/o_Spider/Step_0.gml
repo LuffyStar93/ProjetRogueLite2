@@ -8,14 +8,15 @@ if (distance_ToPlayer < pursuit_Range) {
     var direction_ToPlayer = sign(focus.x - x);
 
 if canMove = 0 {
-        if (mp_grid_path(global.grid,path,x,y,focus.x,focus.y,1)) 
-		{
-        path_start(path,character_Speed,path_action_stop,false);
-        }
-  } else {
-      move_towards_point(x,y, 0);
+    if (mp_grid_path(global.grid,path,x,y,focus.x,focus.y,1)) {
+        xgoto = path_get_point_x(path, 1);
+        ygoto = path_get_point_y(path, 1);
+    mp_potential_step(xgoto, ygoto, character_Speed, false);
+    } else {
+    mp_potential_step(focus.x,focus.y,character_Speed,false);
+    }
   }
-}
+ }
 }
 
 if character_Health <= 0 
@@ -109,7 +110,3 @@ if distance_ToPlayer < 50 and canAttack = 0
 	
 }
 
-if !(place_meeting(x, y, o_StoneBlock)) {
-    instance_create_depth(x,y,-1,o_Smoke);
-instance_destroy();
-}

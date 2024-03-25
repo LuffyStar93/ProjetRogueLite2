@@ -16,8 +16,8 @@
   "name":"o_Jester",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Jester",
+    "path":"folders/Objets/Jester.yy",
   },
   "parentObjectId":null,
   "persistent":true,

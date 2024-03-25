@@ -160,7 +160,7 @@ if can_dash = 3 && place_free(x+xspd,y+yspd) && place_free(x+character_Speed,y+c
     if directionnel 
 		{	
 			can_dash = 0; 
-		}
+		} 
 	
 }
 
@@ -179,7 +179,7 @@ if special_Attack && can_SpecialAttack = 0
 		canMove = 1
         can_SpecialAttack = 1;
 		canAttack = 1
-		alarm[0] = 15
+		alarm[0] =   15
 		alarm[1] = 15
         var nearest_enemy = instance_nearest(x, y, o_EnemyTemplate);
         var aim_angle = point_direction(x, y, nearest_enemy.x, nearest_enemy.y); // Calcul de l'angle entre la flèche et l'ennemi le plus proche

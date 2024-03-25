@@ -10,8 +10,8 @@
   "name":"o_SwordSFXAttack",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Jester",
+    "path":"folders/Objets/Jester.yy",
   },
   "parentObjectId":null,
   "persistent":false,

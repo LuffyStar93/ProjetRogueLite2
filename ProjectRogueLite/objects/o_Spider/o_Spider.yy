@@ -14,8 +14,8 @@
   "name":"o_Spider",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Spider",
+    "path":"folders/Objets/Enemies/Spider.yy",
   },
   "parentObjectId":{
     "name":"o_EnemyTemplate",

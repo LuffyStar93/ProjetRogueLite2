@@ -1,3 +1,4 @@
 canMove = 0
 canAttack = 0
-path = path_add();
+can_BeHit = 0
+path = path_add(); 
