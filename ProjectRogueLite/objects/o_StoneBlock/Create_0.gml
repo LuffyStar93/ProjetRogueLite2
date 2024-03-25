@@ -7,7 +7,7 @@ if room = r_W1_Stone2
 
 if room = r_W1_Stone
 {
-var chance2 = irandom_range(1,25)
+var chance2 = irandom_range(1,15)
 	if chance2 = 1
 	{
 			sprite_index = s_StoneBlock2
