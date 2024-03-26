@@ -8,6 +8,7 @@ character_AttackSpeed = 0.5
 canAttack = 0
 can_BeHit = 0
 canMove = 0
+kill_Count = 0
 lastDirectionX = 1
 lastDirectionY = 1
 lastSprite = noone

@@ -24,6 +24,7 @@ if canMove = 0 {
 if character_Health <= 0 
 {
 	instance_destroy()
+	kill_Count ++
 }
 
 if canAttack = 0 

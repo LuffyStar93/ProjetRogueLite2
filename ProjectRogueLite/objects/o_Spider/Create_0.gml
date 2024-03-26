@@ -11,5 +11,6 @@ canMove = 0
 lastDirectionX = 1
 lastDirectionY = 1
 lastSprite = noone
+kill_Count = 0
 pursuit_Range = 1000
 path = path_add();

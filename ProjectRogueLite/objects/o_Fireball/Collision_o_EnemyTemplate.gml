@@ -1,4 +1,4 @@
-with (other) {
+ with (other) {
     if (can_BeHit = 0) {
 	alarm[3] = 25	
     can_BeHit = 1
