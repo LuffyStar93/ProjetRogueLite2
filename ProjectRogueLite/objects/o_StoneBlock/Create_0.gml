@@ -7,17 +7,18 @@ if room = r_W1_Stone2
 
 if room = r_W1_Stone
 {
+	sprite_index = s_WoodBlock
 var chance2 = irandom_range(1,15)
 	if chance2 = 1
 	{
-			sprite_index = s_StoneBlock2
+			sprite_index = s_WoodBlock2
 	}
 }
 
 var otherr = o_StoneBlock
 if (place_meeting(otherr.x+10,otherr.y+10,self) or place_meeting(otherr.x-10,otherr.y+10,self) or place_meeting(otherr.x+10,otherr.y-10,self) or place_meeting(otherr.x-10,otherr.y-10,self)) 
 {
-if sprite_index = s_StoneBlock2 
+if sprite_index = s_WoodBlock2
 
     {
     var chance = irandom_range(1, 2)
