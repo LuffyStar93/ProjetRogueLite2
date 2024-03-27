@@ -1,0 +1,1 @@
+if once = 4 { instance_destroy(); }

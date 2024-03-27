@@ -5,6 +5,7 @@ character_Health = 10
 character_MaxHealth = character_Health
 character_Luck = 1 // Character Luck, 1 = 1% 
 character_AttackSpeed = 0.75
+speed_Debuff = 1
 canAttack = 0
 can_BeHit = 0
 canMove = 0

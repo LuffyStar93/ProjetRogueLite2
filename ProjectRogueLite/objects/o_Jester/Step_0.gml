@@ -1,5 +1,80 @@
+character_Speed = 3 * speed_Buff
+character_Attack = 5 * attack_Buff
+character_Armor = 2 * armor_Buff
+character_MaxHealth = 10 * maxHealth_Buff
+character_Luck = 15 * luck_Buff
+character_AttackSpeed = 1 * attackSpeed_Buff
+character_SpecialAttackSpeed = 40 * specialAttackSpeed_Buff
+var speed_Buff2 = 1
 
-if (os_type = os_windows)
+
+
+if sec = 60
+		{
+			if global.bonus12 = 2
+			{
+			speed_Buff2 = speed_Buff2 * 0.85
+			global.bonus12 = 1
+			}
+			
+			sec = 0
+			
+			if global.bonus16 = 12
+			{
+				armor_Buff = armor_Buff / 2
+				global.bonus16 = 1
+				
+			
+			}
+			if global.bonus16 >= 2
+			{
+				global.bonus16 =+ 1
+			} 
+			
+			if global.bonus18 = 4
+			{
+				o_EnemyTemplate.speed_Debuff = o_EnemyTemplate.speed_Debuff * 1.2
+				global.bonus18 = 1
+			}
+			
+			if global.bonus18 >= 2
+			
+			{
+				global.bonus18 =+ 1
+			} 
+			
+		}
+
+sec += 1
+
+if global.bonus24 = 1
+{
+	if character_Health <= character_MaxHealth * 0.40
+		{
+			attackSpeed_Buff = attackSpeed_Buff * 1.20
+			global.bonus24 = 2
+		}
+}
+
+if global.bonus24 = 2
+{
+		if character_Health >= character_MaxHealth * 0.40
+		{
+			attackSpeed_Buff = attackSpeed_Buff * 0.80
+			global.bonus24 = 3
+		}
+}
+
+if global.bonus24 = 3
+{
+	if character_Health <= character_MaxHealth * 0.40
+		{
+			global.bonus24 = 1
+		}
+}
+
+
+if (os_type = os_windows) 
 {
 moveUp = keyboard_check(ord("Z")) or gamepad_button_check(0, gp_padu) or (gamepad_axis_value(0, gp_axislv) < -0.5);
 moveDown = keyboard_check(ord("S")) or gamepad_button_check(0, gp_padd) or (gamepad_axis_value(0, gp_axislv) > 0.5);
@@ -8,7 +83,7 @@ moveLeft = keyboard_check(ord("Q")) or gamepad_button_check(0, gp_padl) or (game
 attack = mouse_check_button_pressed(mb_left) or keyboard_check_pressed(ord("J")) or gamepad_button_check(0, gp_face3);
 moveDash = keyboard_check(vk_space) or gamepad_button_check(0, gp_face1);
 special_Attack = keyboard_check(ord("K")) or mouse_check_button_pressed(mb_right) or gamepad_button_check(0, gp_face4);
-}
+} 
 
 else if (os_type = os_macosx)
 {
@@ -149,6 +224,12 @@ if moveDash && can_dash = 0
     can_dash = 3;
     can_BeHit = 1;
     alarm[3] = 15; //durée dash
+	if global.bonus12 = 1
+{
+	var speed_Buff2 = speed_Buff2 * 1.25
+	global.bonus12 = 2
+}
+
 }
 
 if can_dash = 3 && place_free(x+xspd,y+yspd) && place_free(x+character_Speed,y+character_Speed)
@@ -175,7 +256,7 @@ if special_Attack && can_SpecialAttack = 0
 		sprite_index = s_JesterFrontStaffAttack
 		}
 		else sprite_index = s_JesterBackStaffAttack
-        alarm[4] = 40; //CD DU TRUC DISTANCE
+        alarm[4] = character_SpecialAttackSpeed; //CD DU TRUC DISTANCE
 		canMove = 1
         can_SpecialAttack = 1;
 		canAttack = 1

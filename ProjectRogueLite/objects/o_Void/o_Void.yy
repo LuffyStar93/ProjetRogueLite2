@@ -9,8 +9,8 @@
   "name":"o_Void",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Blocks",
+    "path":"folders/Objets/Blocks.yy",
   },
   "parentObjectId":null,
   "persistent":false,

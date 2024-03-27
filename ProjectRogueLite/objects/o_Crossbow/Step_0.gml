@@ -1,3 +1,4 @@
+character_Speed = 0.5 * speed_Debuff 
 
 if instance_exists(o_Jester) {
 focus = instance_nearest(x, y, o_Jester);

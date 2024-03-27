@@ -18,3 +18,6 @@ if block_Spread = 1
 {
 			sprite_index = s_StoneBlock2
 }
+
+//ETAPE BLOCK 
+burn -= 1;

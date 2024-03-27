@@ -10,6 +10,12 @@ if other.can_BeHit = 0
     }
 }
 
+if global.bonus16 = 1
+{
+	global.bonus16 = 2
+	o_Jester.armor_Buff = o_Jester.armor_Buff * 2 
+}
+
 if (other.can_BeHit = 1 && other.hit = id) {
     character_Distance = point_direction(damage_Author.x,damage_Author.y, other.x, other.y);
     knockback_Distance = -10; // DISTANCE DU KNOCKBACK (-10 = MINIMUM)

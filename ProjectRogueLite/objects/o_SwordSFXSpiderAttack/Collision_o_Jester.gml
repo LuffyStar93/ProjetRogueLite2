@@ -1,4 +1,4 @@
-if other.can_BeHit = 0 
+  if other.can_BeHit = 0 
 {
     if other.canMove = 0 or 1 {
     other.can_BeHit = 1
@@ -8,6 +8,12 @@ if other.can_BeHit = 0
     other.alarm[1] = 25;
     other.canMove = 2;
     }
+}
+
+if global.bonus16 = 1
+{
+	global.bonus16 = 2
+	o_Jester.armor_Buff = o_Jester.armor_Buff * 2 
 }
 
 if (other.can_BeHit = 1 && other.hit = id) {

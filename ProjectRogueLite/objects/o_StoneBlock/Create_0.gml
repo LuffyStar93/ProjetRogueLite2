@@ -1,4 +1,5 @@
 block_Spread = 0
+burn = 0
 if room = r_W1_L1
 {
 	sprite_index = s_StoneBlock

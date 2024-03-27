@@ -8,8 +8,8 @@
   "name":"o_DoorSpawner",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objets",
-    "path":"folders/Objets.yy",
+    "name":"Spawners",
+    "path":"folders/Objets/Spawners.yy",
   },
   "parentObjectId":null,
   "persistent":false,
