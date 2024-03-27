@@ -1,0 +1,20 @@
+character_Speed = 1.8 //Character's movement speed
+character_Attack = 7  + (o_Jester.character_Armor/1.2)//Character's attack
+character_Armor = 4 + (o_Jester.character_Attack/1.8)
+character_Health = 200
+character_MaxHealth = character_Health
+character_Luck = 1 // Character Luck, 1 = 1% 
+character_AttackSpeed = 0.5
+speed_Debuff = 1
+canAttack = 0
+can_BeHit = 0
+canMove = 0
+kill_Count = 0
+lastDirectionX = 1
+lastDirectionY = 1
+boss = 0;
+lastSprite = noone
+pursuit_Range = 1700
+path = path_add();
+alarm[4] = 300;
+alarm[2] = 2500;
